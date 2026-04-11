@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignacio Lopez Miguez — Product</title>
+  <meta name="description" content="Senior Product Manager with an engineering instinct. Fintech portfolio — Romana and Crédito Claro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#projects" class="skip-link">Skip to projects</a>
+
+  <!-- Sticky Nav (hidden until scroll) -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <span class="nav-monogram">ILM</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ACT I: HERO -->
+  <section class="hero" id="hero">
+    <div class="grain"></div>
+    <div class="hero-content">
+      <h1 class="hero-name reveal-hero-name">
+        <span class="name-line">IGNACIO</span>
+        <span class="name-line">LOPEZ MIGUEZ</span>
+      </h1>
+      <div class="workshop-frame reveal-hero-frame" aria-label="Tagline">
+        <p class="hero-tagline">I FIND THE REAL PROBLEM.</p>
+        <p class="hero-tagline">THEN I BUILD THE FIX.</p>
+      </div>
+      <p class="hero-sub reveal-hero-sub">Senior Product Manager · Fintech</p>
+    </div>
+    <div class="scroll-indicator reveal-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M4 7l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ACT II: ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title reveal-left">ABOUT</h2>
+      <div class="section-rule reveal-left" style="transition-delay: 0.1s"></div>
+      <div class="about-grid">
+        <div class="about-text reveal" style="transition-delay: 0.2s">
+          <p>I started in Big Four audit at EY — reconciling balances, tracing transactional flows, writing controls documentation. That gave me a way of seeing: every system has a failure mode, and someone has to find it before it finds you.</p>
+          <p>That lens carried through 12+ Salesforce and ERP implementations at VFP, then into product ownership at Jetpacks!, and now into a solo AI agency where I take platforms from discovery to production. I don't pitch decks and hand off specs. I write the requirements, own the backlog, and ship the thing — using AI-augmented development to compress what used to take a team into something one person can actually deliver.</p>
+        </div>
+        <div class="about-pillars reveal" style="transition-delay: 0.35s">
+          <div class="pillar">
+            <span class="pillar-title">FINANCE & AUDIT RIGOR</span>
+            <p>EY-trained. I care about data integrity, access governance, and control design the way most PMs care about conversion metrics. When I build, I build things that don't break quietly.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-title">END-TO-END DELIVERY</span>
+            <p>Discovery, spec, backlog, build, go-live. I've owned all of it — in consulting, in-house, and as a solo founder. SQL, Python, Tableau, Salesforce, React Native. Not a developer; a builder who closes the loop.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-title">AI-AUGMENTED OPERATOR</span>
+            <p>Claude Code, agentic workflows, spec-driven methodologies. I use these to deliver production-grade platforms at solo-operator speed — and I treat the methodology itself as a product that needs iteration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT III: PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal-left">WORK</h2>
+      <div class="section-rule reveal-left" style="transition-delay: 0.1s"></div>
+
+      <!-- Project 1: Romana -->
+      <article class="project-card reveal" style="transition-delay: 0.2s">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-tag">Mobile</span>
+            <span class="project-tag">Consumer Fintech</span>
+            <span class="project-tag">React Native</span>
+          </div>
+          <a href="https://github.com/ilopezmiguez-rgb/romana" target="_blank" rel="noopener" class="project-link" aria-label="Romana on GitHub">
+            GitHub →
+          </a>
+        </div>
+
+        <h3 class="project-title">ROMANA</h3>
+        <p class="project-subtitle">Shared expense tracker that minimizes settlement friction</p>
+
+        <div class="project-body">
+          <div class="project-text">
+            <div class="problem-block">
+              <span class="label">THE PROBLEM</span>
+              <p>Splitting shared costs is universally painful. Existing tools are either too complex for casual use or too primitive for real group dynamics: late joiners, unequal splits, multiple settlements over time. The gap Romana targets is precise — <em>you just paid, your friends are still at the table, and you need to log it in three taps.</em></p>
+            </div>
+
+            <div class="decisions-block">
+              <span class="label">KEY PRODUCT DECISIONS</span>
+              <div class="decision">
+                <span class="decision-num mono">01</span>
+                <div>
+                  <strong>Settlements are immutable.</strong> A settlement is a fact — not an editable record. Allowing edits would corrupt balance history. The schema enforces this with a no-DELETE policy, because the right product decision and the right data decision are the same decision.
+                </div>
+              </div>
+              <div class="decision">
+                <span class="decision-num mono">02</span>
+                <div>
+                  <strong>Store resolved amounts, not split types.</strong> Whether even, percentage, or by item — <span class="mono">expense_shares</span> always stores "person X owes $Y." Balance calculation becomes a simple SUM. New split types only need a new form — zero schema changes.
+                </div>
+              </div>
+              <div class="decision">
+                <span class="decision-num mono">03</span>
+                <div>
+                  <strong>Seven extension points from day one.</strong> Multi-currency, recurring expenses, receipt photos — none require schema refactors. The architecture of V1 respects the roadmap of V3. Future phases are planned before the first line of code.
+                </div>
+              </div>
+            </div>
+
+            <div class="status-block">
+              <span class="label">STATUS</span>
+              <p>Design complete · Implementation in progress (Phase 1: Foundation)</p>
+            </div>
+          </div>
+
+          <div class="project-visuals">
+            <div class="phone-gallery" aria-label="Romana app screenshots">
+              <div class="phone-card">
+                <img src="Simulator Screenshot - iPhone 17 Pro - 2026-04-11 at 11.19.33.png" alt="Romana — Balances screen showing settled state" loading="lazy" />
+              </div>
+              <div class="phone-card">
+                <img src="Screenshot 2026-04-11 at 11.21.25.png" alt="Romana — Add expense screen with split type selection" loading="lazy" />
+              </div>
+              <div class="phone-card">
+                <img src="Screenshot 2026-04-11 at 11.21.09.png" alt="Romana — Settle Up screen showing debt simplification results" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Divider -->
+      <div class="project-divider" aria-hidden="true"></div>
+
+      <!-- Project 2: Crédito Claro -->
+      <article class="project-card reveal" style="transition-delay: 0.25s">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-tag">Web</span>
+            <span class="project-tag">Credit · Fintech</span>
+            <span class="project-tag">MVP Prototype</span>
+          </div>
+          <a href="https://github.com/ilopezmiguez-rgb/simulador-credito" target="_blank" rel="noopener" class="project-link" aria-label="Crédito Claro on GitHub">
+            GitHub →
+          </a>
+        </div>
+
+        <h3 class="project-title">CRÉDITO CLARO</h3>
+        <p class="project-subtitle">Transparent loan simulator built on a single hypothesis</p>
+
+        <div class="project-body project-body--reversed">
+          <div class="project-visuals project-visuals--single">
+            <div class="simulator-frame reveal" style="transition-delay: 0.4s">
+              <img src="credito-claro-explanation.png" alt="Crédito Claro — Loan simulator showing cost breakdown and explanation mode" loading="lazy" />
+            </div>
+            <a href="https://ilopezmiguez-rgb.github.io/simulador-credito" target="_blank" rel="noopener" class="live-demo-cta">
+              <span class="live-demo-dot"></span>
+              Try the Live Demo →
+            </a>
+          </div>
+
+          <div class="project-text">
+            <div class="problem-block">
+              <span class="label">THE HYPOTHESIS</span>
+              <p>Most Argentine credit simulators show a monthly payment and nothing else. Users don't understand how much interest they're paying, can't compare scenarios, and don't know what TNA means. The hypothesis: <em>greater cost transparency increases conversion to loan applications.</em></p>
+            </div>
+
+            <div class="decisions-block">
+              <span class="label">KEY PRODUCT DECISIONS</span>
+              <div class="decision">
+                <span class="decision-num mono">01</span>
+                <div>
+                  <strong>Offline-first data strategy.</strong> INDEC inflation data was pre-fetched and cached statically instead of calling a live API. This eliminates a class of failure modes in demo contexts — a deliberate trade-off of real-time accuracy for reliability. The product works regardless of external dependencies.
+                </div>
+              </div>
+              <div class="decision">
+                <span class="decision-num mono">02</span>
+                <div>
+                  <strong>French amortization as default.</strong> Most consumer credit in Argentina uses fixed installments. Matching the mental model users already carry from their real-world loans is a product decision, not just a technical one.
+                </div>
+              </div>
+              <div class="decision">
+                <span class="decision-num mono">03</span>
+                <div>
+                  <strong>Explicit scope exclusion.</strong> Real scoring, personalized offers, and live rate feeds were deferred — documented, not forgotten. V1 validates one thing: does transparency itself move the needle on conversion?
+                </div>
+              </div>
+            </div>
+
+            <div class="kpi-block">
+              <span class="label">WHAT I'D MEASURE</span>
+              <div class="kpi-grid">
+                <div class="kpi">
+                  <span class="kpi-name mono">completion_rate</span>
+                  <span class="kpi-desc">% reaching full results after adjusting ≥1 parameter</span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-name mono">comparator_usage</span>
+                  <span class="kpi-desc">signals active decision-making, not passive browsing</span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-name mono">cta_click_rate</span>
+                  <span class="kpi-desc">the conversion event the transparency hypothesis is built around</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ACT IV: CONTACT -->
+  <section class="contact" id="contact">
+    <div class="grain"></div>
+    <div class="container">
+      <div class="workshop-frame workshop-frame--cta reveal">
+        <h2 class="contact-headline">LET'S TALK PRODUCT.</h2>
+      </div>
+      <p class="contact-sub reveal" style="transition-delay: 0.2s">
+        I'm looking for senior PM roles in fintech — payments, credit, banking infrastructure, or anything where product rigor and execution speed matter.
+      </p>
+      <div class="contact-links reveal" style="transition-delay: 0.35s">
+        <a href="mailto:ilopezmiguez@gmail.com" class="cta-button">Get in Touch</a>
+        <a href="https://www.linkedin.com/in/ilopezmiguez" target="_blank" rel="noopener" class="cta-secondary">LinkedIn</a>
+        <a href="https://github.com/ilopezmiguez-rgb" target="_blank" rel="noopener" class="cta-secondary">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-monogram">ILM</span>
+      <span class="footer-copy">© 2026 Ignacio Lopez Miguez</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
