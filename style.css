@@ -632,6 +632,156 @@ h1, h2, h3, .display {
   .phone-card:nth-child(3) { width: 138px; }
 }
 
+/* Outcome hero (shipped-project impact metric) */
+.outcome-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--amber);
+  background: rgba(212, 147, 13, 0.06);
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+.outcome-number {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: 0.02em;
+  color: var(--amber);
+  line-height: 1;
+}
+.outcome-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--aged-cream);
+  font-weight: 500;
+  max-width: 280px;
+  line-height: 1.4;
+}
+.outcome-note {
+  font-size: 0.9375rem;
+  color: var(--warm-stone);
+  line-height: 1.65;
+  max-width: 600px;
+}
+.outcome-note .mono {
+  color: var(--amber);
+  background: rgba(212, 147, 13, 0.06);
+  padding: 0.05em 0.3em;
+  border-radius: 2px;
+}
+
+/* Stacked layout: dashboard screenshots below text (landscape) */
+.project-body--stacked {
+  display: block;
+}
+.project-body--stacked .project-text { max-width: 720px; }
+.project-body--stacked .project-visuals {
+  margin-top: 3.5rem;
+  display: block;
+}
+
+.project-visuals--dashboard {
+  justify-content: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.dashboard-demo-cta { align-self: flex-start; margin-bottom: 1rem; }
+
+.dashboard-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.dashboard-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0;
+  border-radius: 10px;
+  scrollbar-width: none;
+}
+.dashboard-track::-webkit-scrollbar { display: none; }
+
+.dashboard-card {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(196, 182, 156, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  background: var(--midnight);
+}
+.dashboard-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dashboard-caption {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.875rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  background: rgba(26, 26, 26, 0.82);
+  backdrop-filter: blur(4px);
+  padding: 0.3rem 0.55rem;
+  border-radius: 2px;
+  border: 1px solid rgba(212, 147, 13, 0.25);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--amber);
+  background: rgba(26, 26, 26, 0.78);
+  border: 1px solid rgba(212, 147, 13, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+.carousel-btn:hover { background: rgba(26, 26, 26, 0.95); transform: translateY(-50%) scale(1.05); }
+.carousel-btn:disabled { opacity: 0.3; cursor: default; }
+.carousel-btn--prev { left: 0.75rem; }
+.carousel-btn--next { right: 0.75rem; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 147, 13, 0.45);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.carousel-dot.is-active { background: var(--amber); transform: scale(1.2); }
+
+@media (max-width: 600px) {
+  .dashboard-caption { font-size: 0.58rem; padding: 0.25rem 0.45rem; }
+  .carousel-btn { width: 2.25rem; height: 2.25rem; font-size: 1.3rem; }
+}
+
 /* ============================================================
    CONTACT
    ============================================================ */

@@ -80,7 +80,102 @@
       <h2 class="section-title reveal-left">WORK</h2>
       <div class="section-rule reveal-left" style="transition-delay: 0.1s"></div>
 
-      <!-- Project 1: Romana -->
+      <!-- Project 1: Rate Shop Analyzer -->
+      <article class="project-card reveal" style="transition-delay: 0.2s">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-tag">Web</span>
+            <span class="project-tag">B2B · Pricing Intelligence</span>
+            <span class="project-tag">Last-Mile Logistics</span>
+          </div>
+          <a href="https://last-mile-rate-shop-analyzer.vercel.app/analyzer" target="_blank" rel="noopener" class="project-link project-link--live" aria-label="Rate Shop Analyzer live demo">
+            Live Demo →
+          </a>
+        </div>
+
+        <h3 class="project-title">RATE SHOP ANALYZER</h3>
+        <p class="project-subtitle">Pricing intelligence for a US last-mile carrier — shipped, in production, +40% weekly volume on strategic accounts</p>
+
+        <div class="project-body project-body--stacked">
+          <div class="project-text">
+            <div class="problem-block">
+              <span class="label">THE PROBLEM</span>
+              <p>A last-mile carrier receives thousands of <em>rate shops</em> per day — quote requests — and books a fraction as transactions. Revenue leaders can see the aggregate win rate, but not the decision they actually need to make: <em>which lanes am I losing that I could be winning, and what should I quote?</em> Spreadsheets collapse under the segmentation (metro × origin × zone × weight), and by the time a pricing cycle is approved, the market has moved.</p>
+            </div>
+
+            <div class="decisions-block">
+              <span class="label">KEY PRODUCT DECISIONS</span>
+              <div class="decision">
+                <span class="decision-num mono">01</span>
+                <div>
+                  <strong>Three views, one filter bar.</strong> Analyzer (diagnosis), Opportunity Finder (where to look), Price Recommendator (what to do) are separate surfaces but share a global filter state. One mental model, three altitudes — a user who narrows to <span class="mono">METRO=BOS</span> in the Analyzer keeps that lens when they switch to recommendations.
+                </div>
+              </div>
+              <div class="decision">
+                <span class="decision-num mono">02</span>
+                <div>
+                  <strong>Impact score beats raw win rate.</strong> Ranking segments by win rate alone surfaces tiny, noisy lanes. Impact = (distance from target band) × segment volume. The recommendations that float to the top are the moves that actually shift revenue — not statistical ghosts.
+                </div>
+              </div>
+              <div class="decision">
+                <span class="decision-num mono">03</span>
+                <div>
+                  <strong>$0.05 steps inside a win-rate band.</strong> The Recommendator only suggests moves in the smallest price unit the market reacts to, and only when the segment is outside a configurable band (e.g. 60–85%). This prevents overcorrection and keeps the tool usable by humans, not just a black-box optimizer.
+                </div>
+              </div>
+            </div>
+
+            <div class="kpi-block">
+              <span class="label">OUTCOME</span>
+              <div class="outcome-hero">
+                <span class="outcome-number">+40%</span>
+                <span class="outcome-label">weekly volume on strategic accounts</span>
+              </div>
+              <p class="outcome-note">The revenue team used the Analyzer and Recommendator to reprice by <span class="mono">zone × weight</span> segment on our highest-priority clients. Within weeks, won volume on those accounts lifted 40%+ — driven by winning back lanes the team didn't previously know they were losing, at prices the data said the market would accept.</p>
+            </div>
+
+            <div class="status-block">
+              <span class="label">STATUS</span>
+              <p>Shipped · In production with the revenue team</p>
+            </div>
+          </div>
+
+          <div class="project-visuals project-visuals--dashboard">
+            <a href="https://last-mile-rate-shop-analyzer.vercel.app/analyzer" target="_blank" rel="noopener" class="live-demo-cta dashboard-demo-cta">
+              <span class="live-demo-dot"></span>
+              Try the Live Demo →
+            </a>
+            <div class="dashboard-carousel" aria-roledescription="carousel" aria-label="Rate Shop Analyzer screenshots">
+              <div class="dashboard-track">
+                <div class="dashboard-card" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                  <img src="Screenshot 2026-04-17 at 07.33.44.png" alt="Rate Shop Analyzer — Analyzer view with conversion heatmap by weight and distance" loading="lazy" />
+                  <span class="dashboard-caption mono">ANALYZER · CONVERSION MATRIX</span>
+                </div>
+                <div class="dashboard-card" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                  <img src="Screenshot 2026-04-17 at 07.35.03.png" alt="Rate Shop Analyzer — Opportunity Finder ranking recoverable lanes by lost volume" loading="lazy" />
+                  <span class="dashboard-caption mono">OPPORTUNITY FINDER · RANKED LANES</span>
+                </div>
+                <div class="dashboard-card" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                  <img src="Screenshot 2026-04-17 at 07.35.50.png" alt="Rate Shop Analyzer — Price Recommendator showing ±$0.05 pricing moves" loading="lazy" />
+                  <span class="dashboard-caption mono">PRICE RECOMMENDATOR · ±$0.05 MOVES</span>
+                </div>
+              </div>
+              <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous screenshot">‹</button>
+              <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next screenshot">›</button>
+              <div class="carousel-dots" role="tablist" aria-label="Select screenshot">
+                <button type="button" class="carousel-dot is-active" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
+                <button type="button" class="carousel-dot" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
+                <button type="button" class="carousel-dot" role="tab" aria-label="Go to slide 3" aria-selected="false"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Divider -->
+      <div class="project-divider" aria-hidden="true"></div>
+
+      <!-- Project 2: Romana -->
       <article class="project-card reveal" style="transition-delay: 0.2s">
         <div class="project-header">
           <div class="project-meta">
@@ -150,7 +245,7 @@
       <!-- Divider -->
       <div class="project-divider" aria-hidden="true"></div>
 
-      <!-- Project 2: Crédito Claro -->
+      <!-- Project 3: Crédito Claro -->
       <article class="project-card reveal" style="transition-delay: 0.25s">
         <div class="project-header">
           <div class="project-meta">
